@@ -1,0 +1,218 @@
+[
+  {
+    "id": "1",
+    "title": "Bouldergarten",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["energetic"],
+    "imgPath": "https://picsum.photos/300/300?random=1",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "2",
+    "title": "Tiergarten",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["relaxed"],
+    "imgPath": "https://picsum.photos/300/300?random=2",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "3",
+    "title": "Viktoria Park",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["relaxed"],
+    "imgPath": "https://picsum.photos/300/300?random=3",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "4",
+    "title": "Teufelssee",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["thoughtful"],
+    "imgPath": "https://picsum.photos/300/300?random=4",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "5",
+    "title": "Tempelhofer Feld",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["thoughtful"],
+    "imgPath": "https://picsum.photos/300/300?random=5",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "6",
+    "title": "Sammlung Boros",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["thoughtful"],
+    "imgPath": "https://picsum.photos/300/300?random=6",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "7",
+    "title": "Admiralbrücke",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["bored"],
+    "imgPath": "https://picsum.photos/300/300?random=7",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "8",
+    "title": "Hasenheide",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["joyful"],
+    "imgPath": "https://picsum.photos/300/300?random=8",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "9",
+    "title": "Berghain",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["angry"],
+    "imgPath": "https://picsum.photos/300/300?random=9",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "10",
+    "title": "Kampfsport Akademie Berlin",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["angry"],
+    "imgPath": "https://picsum.photos/300/300?random=10",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "11",
+    "title": "Zeiss-Großplanetarium",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["anxious"],
+    "imgPath": "https://picsum.photos/300/300?random=11",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "12",
+    "title": "Radialsystem",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["bored"],
+    "imgPath": "https://picsum.photos/300/300?random=12",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "13",
+    "title": "Botanischer Garten",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["melancholic"],
+    "imgPath": "https://picsum.photos/300/300?random=13",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "14",
+    "title": "Bouldergarten",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["energetic"],
+    "imgPath": "https://picsum.photos/300/300?random=14",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "15",
+    "title": "Bouldergarten",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["energetic"],
+    "imgPath": "https://picsum.photos/300/300?random=15",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "16",
+    "title": "Bouldergarten",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["energetic"],
+    "imgPath": "https://picsum.photos/300/300?random=16",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "17",
+    "title": "Bouldergarten",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["energetic"],
+    "imgPath": "https://picsum.photos/300/300?random=17",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "18",
+    "title": "Bouldergarten",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["energetic"],
+    "imgPath": "https://picsum.photos/300/300?random=18",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "19",
+    "title": "Bouldergarten",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["energetic"],
+    "imgPath": "https://picsum.photos/300/300?random=19",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "20",
+    "title": "Bouldergarten",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["energetic"],
+    "imgPath": "https://picsum.photos/300/300?random=20",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "21",
+    "title": "Bouldergarten",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["energetic"],
+    "imgPath": "https://picsum.photos/300/300?random=21",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "22",
+    "title": "Bouldergarten",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["energetic"],
+    "imgPath": "https://picsum.photos/300/300?random=22",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "23",
+    "title": "Bouldergarten",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["energetic"],
+    "imgPath": "https://picsum.photos/300/300?random=23",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  },
+  {
+    "id": "24",
+    "title": "Bouldergarten",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+    "mood": ["energetic"],
+    "imgPath": "https://picsum.photos/300/300?random=24",
+    "adress": { "street": "", "zip": "", "city": "" },
+    "review": ""
+  }
+]
