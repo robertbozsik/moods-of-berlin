@@ -5,9 +5,25 @@ const placeSchema = new Schema(
   {
     title: String,
     description: String,
-    mood: ["joy", "sadness", "anger"], // task: define the moods
-    img: String,
-    address: String,
+    mood: {
+      type: String,
+      enum: [
+        "joyful",
+        "relaxed",
+        "energetic",
+        "bored",
+        "thoughtful",
+        "melancholic",
+        "anxious",
+        "angry",
+      ],
+    },
+    imgPath: String,
+    address: {
+      street: String,
+      zip: String,
+      city: String,
+    },
     review: [String],
     // owner: { type: Schema.Types.ObjectId, ref: 'User' },
   },
