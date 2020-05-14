@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component, Fragment} from 'react';
 import './App.css';
+import places from "./placesFrontend.json"
+import PlacesList from "./PlacesList"
+import Search from "./Search.js"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  state = {
+    places: places,
+    query: "",
+  };
+
+  setQuery = (query) => {
+    this.setState({
+      query: query,
+    });
+  };
+
+  render() {
+
+    return (
+      
+      <Fragment>
+      <Search query={this.state.query} triggerSetQuery={this.setQuery} />
+      
+      <PlacesList places={this.state.places} query={this.state.query} />
+
+      </Fragment>
+      
+    );
+
+
+
+  }
+  
 }
 
 export default App;
