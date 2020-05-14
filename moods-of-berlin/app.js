@@ -11,7 +11,10 @@ const path = require("path");
 
 mongoose
 
-  .connect("mongodb://localhost/moods-of-berlin", { useNewUrlParser: true, useUnifiedTopology: true  })
+  .connect("mongodb://localhost/moods-of-berlin", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
 
   .then((x) => {
     console.log(
@@ -52,5 +55,16 @@ app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
 // default value for title local
 app.locals.title = "Express - Generated with IronGenerator";
+
+// TWO TEST ROUTES ADDED BY ALFONSO
+app.get("/", (req, res) => {
+  res.send("All good with the GET request");
+  // res.send(req.query);
+});
+
+app.post("/", (req, res) => {
+  // res.send("All good with the POST request");
+  res.send(req.body);
+});
 
 module.exports = app;
