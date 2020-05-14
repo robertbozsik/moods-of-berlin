@@ -57,16 +57,15 @@ app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 app.locals.title = "Express - Generated with IronGenerator";
 
 // TWO TEST ROUTES ADDED BY ALFONSO
+// app.get("/api/places", (req, res) => {
+//   // res.send("All good with the GET request");
+//   res.send(req.query);
+// });
 
-app.get("/", (req, res) => {
-  // res.send("All good with the GET request");
-  res.send(req.query);
-});
-
-app.post("/", (req, res) => {
-  // res.send("All good with the POST request");
-  res.send(req.body);
-});
+// app.post("/", (req, res) => { // http//:localhost:5555 --> http//:localhost:5555/api/places
+//   // res.send("All good with the POST request");
+//   res.send(req.body);
+// });
 
 app.use("/api/places", require("./routes/places"));
 
