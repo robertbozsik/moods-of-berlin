@@ -1,10 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class Search extends Component {
-
-  handleChange = event => {
-    this.props.triggerSetQuery(event.target.value)
-  }
+  handleChange = (event) => {
+    this.props.triggerSetQuery(event.target.value);
+  };
 
   render() {
     return (
@@ -12,10 +11,10 @@ export default class Search extends Component {
         <input
           type="text"
           name="query"
-          ue={this.props.query}
+          value={this.props.query}
           onChange={this.handleChange}
         />
       </div>
-    )
+    );
   }
 }
