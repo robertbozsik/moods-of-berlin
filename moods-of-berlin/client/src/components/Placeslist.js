@@ -2,7 +2,7 @@ import React from "react";
 
 const PlacesList = (props) => {
   console.log(props);
-  console.log(props.query)
+  console.log(props.query);
   const filtered = props.places.filter((place) => {
     return place.title.toLowerCase().includes(props.query.toLowerCase())
       ? true

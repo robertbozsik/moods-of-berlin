@@ -1,13 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter} from 'react-router-dom';
+import { BrowserRouter, Route } from "react-router-dom";
 import "./index.css";
-import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import App from "./App";
+import HomeTest from "./components/pages/HomeTest";
+import AboutTest from "./components/pages/AboutTest";
+import ProtectedAreaTest from "./components/pages/ProtectedAreaTest";
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <div>
+      <Route exact path="/" component={HomeTest} />
+      <Route exact path="/about" component={AboutTest} />
+      <Route exact path="/api/places" component={App} />
+      <Route exact path="/api/places/protected" component={ProtectedAreaTest} />
+    </div>
   </BrowserRouter>,
   document.getElementById("root")
 );
