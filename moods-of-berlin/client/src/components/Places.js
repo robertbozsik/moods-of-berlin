@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from "react";
-import 'bootstrap/dist/css/bootstrap.css'
+import "bootstrap/dist/css/bootstrap.css";
 import places from "../placesFrontend.json";
 import PlacesList from "./Placeslist";
 import Search from "./Search.js";
-import axios from 'axios';  // not used 
+import axios from "axios"; // not used
 
 class App extends Component {
   state = {
@@ -11,29 +11,27 @@ class App extends Component {
     query: "",
   };
 
-// not used - >
+  // not used - >
 
   componentDidMount = () => {
     this.getData();
-  }
+  };
 
   getData = () => {
     axios
-    .get('/api/places')
-    .then(response => {
-      console.log(response.data)
-      this.setState({
-        places: response.data
+      .get("/api/places")
+      .then((response) => {
+        console.log(response.data);
+        this.setState({
+          places: response.data,
+        });
       })
-    })
-.catch(err => {
-  console.log (err)
-})
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
-  }
-
-
-  // < - not used 
+  // < - not used
 
   setQuery = (query) => {
     this.setState({
