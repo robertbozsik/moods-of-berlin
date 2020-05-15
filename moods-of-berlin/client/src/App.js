@@ -3,7 +3,6 @@ import ReactMapGL, { Marker } from "react-map-gl";
 import "./App.css";
 import Colorbar from "./components/Colorbar.js";
 import axios from "axios";
-// import Places from "./components/Places.js";
 import Places from "./components/Places.js";
 // import Navbar from "./components/Navbar.js";
 import NavbarTest from "./components/NavbarTest";
@@ -16,12 +15,14 @@ export default function App() {
     height: "50vh",
     zoom: 10,
   });
+
   return (
     <Fragment>
       {/*<Navbar />
     <Places />*/}
       <NavbarTest />
       <h1>Moods of Berlin</h1>
+
       <ReactMapGL
         {...viewport}
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
