@@ -59,13 +59,8 @@ app.locals.title = "Express - Generated with IronGenerator";
 // TWO TEST ROUTES ADDED BY ALFONSO
 // 1
 // app.get("/api/places", (req, res) => {
-<<<<<<< HEAD
 //   // res.send("All good with the GET request");
 //   // res.send(req.query);
-=======
-//   res.send("All good with the GET request");
-// res.send(req.query);
->>>>>>> master
 // });
 // 2
 // app.post("/", (req, res) => { // http//:localhost:5555 --> http//:localhost:5555/api/places

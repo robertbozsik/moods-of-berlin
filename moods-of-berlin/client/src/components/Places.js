@@ -1,6 +1,6 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import PlacesList from "./Placeslist";
+import PlaceList from "./PlaceList";
 // import Search from "./Search.js";
 import axios from "axios";
 
@@ -33,7 +33,7 @@ class Places extends Component {
     return (
       <div>
         {this.state.places.length ? (
-          <PlacesList places={this.state.places} />
+          <PlaceList places={this.state.places} />
         ) : null}
       </div>
     );
