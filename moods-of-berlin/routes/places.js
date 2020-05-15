@@ -4,14 +4,6 @@ const Place = require("../models/Place");
 
 // create a place
 router.post("/", (req, res) => {
-  //   const title = req.body.title;
-  //   const description = req.body.description;
-  //   const mood = req.body.mood;
-  //   const imgPath = req.body.imgPath;
-  //   const street = req.body.street;
-  //   const zip = req.body.zip;
-  //   const city = req.body.city;
-  //   const review = req.body.review;
   const {
     title,
     description,
@@ -53,7 +45,6 @@ router.get("/", (req, res) => {
 });
 
 // return the specified place
-
 router.get("/:id", (req, res) => {
   // check if req.params.id is valid, if not respond with a 4xx status code
   Place.findById(req.params.id)
@@ -71,7 +62,6 @@ router.get("/:id", (req, res) => {
 });
 
 // edit the specified place
-
 router.put("/:id", (req, res) => {
   const {
     title,
@@ -99,7 +89,6 @@ router.put("/:id", (req, res) => {
 });
 
 // delete the specified place
-
 router.delete("/:id", (req, res) => {
   // delete the place
   Place.findByIdAndDelete(req.params.id)

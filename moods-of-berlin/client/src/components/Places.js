@@ -1,66 +1,37 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import places from "../placesFrontend.json";
-import PlacesList from "./Placeslist";
-import Search from "./Search.js";
-import axios from "axios"; // not used
-import Colorbar from "./Colorbar";
-
-class App extends Component {
+import PlaceList from "./PlaceList";
+// import Search from "./Search.js";
+import axios from "axios";
+class Places extends Component {
   state = {
-    places: places, // should be [] after conecting to backend
-    query: "",
-    mood: {
-rage: false,
-bored: false,
-    },
+    places: [],
   };
-
-  // not used - >
-
-  componentDidMount = () => {
-    this.getData();
-  };
-
-  getData = () => {
+  getAllPlaces = () => {
     axios
-      .get("/api/places")
-      .then((response) => {
-        console.log(response.data);
+      .get(`/api/places`)
+      .then((responseFromApi) => {
+        console.log(responseFromApi);
         this.setState({
-          places: response.data,
+          places: responseFromApi.data,
         });
       })
       .catch((err) => {
         console.log(err);
       });
   };
-
-  // < - not used
-
-  setQuery = (query) => {
-    this.setState({
-      query: query,
-    });
-  };
-
-  setMood = (mood) => {
-    this.setState({
-      mood: mood,
-    });
-  };
-
+  componentDidMount() {
+    this.getAllPlaces();
+  }
   render() {
-   
-
+    console.log("<Places/> RENDER");
+    console.log(this.state);
     return (
-      <Fragment>
-        <Colorbar mood="rage" triggerSetMood={this.setMood} />
-        <Search query={this.state.query} triggerSetQuery={this.setQuery} />
-        <PlacesList places={this.state.places} query={this.state.query} />
-      </Fragment>
+      <div>
+        {this.state.places.length ? (
+          <PlaceList places={this.state.places} />
+        ) : null}
+      </div>
     );
   }
 }
-
-export default App;
