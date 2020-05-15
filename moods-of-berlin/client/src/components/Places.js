@@ -35,3 +35,5 @@ class Places extends Component {
     );
   }
 }
+
+export default Places;
