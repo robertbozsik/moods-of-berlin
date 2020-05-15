@@ -1,41 +1,28 @@
-import React from "react";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 const PlacesList = (props) => {
-  console.log(props);
-  console.log(props.query);
-  const filtered = props.places.filter((place) => {
-    return place.title.toLowerCase().includes(props.query.toLowerCase())
-      ? true
-      : false;
-  });
+  console.log(props.places);
 
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
-      <table>
-        <thead>
-          <tr>
-            <th>Foto</th>
-            <th>Title</th>
-            <th>street</th>
-            <th>zip</th>
-            <th>city</th>
-            <th>review</th>
-          </tr>
-        </thead>
-        <tbody>
-          {/* filter the contacts by the `query` that is in the Search component */}
-          {filtered.map((place) => {
-            return (
-              <tr key={place.id}>
-                <td>
-                  <img src={place.imgPath} height="100px" alt={place.title} />
-                </td>
-                <td>{place.title}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+    <div>
+      <div style={{ width: "60%", float: "left" }}>
+        {props.places.map((place) => {
+          return (
+            <div key={place._id}>
+              <h3>{place.title}</h3>
+              <h3>{place.description}</h3>
+              <h3>{place.mood}</h3>
+              <h3>{place.imgPath}</h3>
+              <h3>{place.street}</h3>
+              <h3>{place.zip}</h3>
+              <h3>{place.city}</h3>
+
+              {/* <p style={{maxWidth: '400px'}} >{project.description} </p> */}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
