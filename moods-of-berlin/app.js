@@ -60,14 +60,14 @@ app.locals.title = "Express - Generated with IronGenerator";
 // 1
 // app.get("/api/places", (req, res) => {
 //   // res.send("All good with the GET request");
-//   res.send(req.query);
+//   // res.send(req.query);
 // });
 // 2
 // app.post("/", (req, res) => { // http//:localhost:5555 --> http//:localhost:5555/api/places
 //   // res.send("All good with the POST request");
-//   res.send(req.body);
+//   // res.send(req.body);
 // });
 
-app.use("api/places", require("./routes/places"));
+app.use("/api/places", require("./routes/places"));
 
 module.exports = app;

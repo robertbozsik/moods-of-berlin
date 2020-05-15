@@ -1,8 +1,10 @@
 import React from "react";
+import NavbarTest from "../NavbarTest";
 
 const ProtectedAreaTest = (props) => {
   return (
     <div>
+      <NavbarTest />
       <h1>Protected Area</h1>
       <p1>
         This will be a protected area for users who already signed up and logged
