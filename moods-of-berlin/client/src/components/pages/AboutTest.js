@@ -1,8 +1,10 @@
 import React from "react";
+import NavbarTest from "../NavbarTest";
 
 const AboutTest = (props) => {
   return (
     <React.Fragment>
+      <NavbarTest />
       <h1>About</h1>
       <p>
         This is the Moods of Berlin web application v1.0.0. It is part of an
