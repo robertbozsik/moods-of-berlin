@@ -1,36 +1,22 @@
-import React, { Component } from "react";
+import React from "react";
 
-class InputTagCollection extends Component {
-  render() {
-    console.log(this.props.tags);
-    const {
-      search,
-      price,
-      color,
-      gender,
-      material,
-      category,
-    } = this.props.tags;
-    return (
-      <div id="chosen-tags">
-        {search.inputTerm.length ? (
-          <div className="collection" onClick={this.props.cancelSearchTag}>
-            <h6 onClick={this.props.cancelSearchTag}>{search.inputTerm}</h6>
-          </div>
-        ) : null}
+const Colorbar = (props) => {
+  return (
+    <div>
+      <body>
+        <div class="container">
+          <div class="box">joyful</div>
+          <div class="box">relaxed</div>
+          <div class="box">energetic</div>
+          <div class="box">bored</div>
+          <div class="box">thoughtful</div>
+          <div class="box">melancholic</div>
+          <div class="box">anxious</div>
+          <div class="box">angry</div>
+        </div>
+      </body>
+    </div>
+  );
+};
 
-        {color.white ? (
-          <div
-            className="collection white"
-            data-name="white"
-            onClick={(e) => this.props.allFilterClickListener(e, "color")}
-          >
-            <h6 data-name="white">WHITE</h6>
-          </div>
-        ) : null}
-      </div>
-    );
-  }
-}
-
-export default InputTagCollection;
+export default Colorbar;

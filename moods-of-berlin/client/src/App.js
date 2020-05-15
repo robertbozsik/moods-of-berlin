@@ -3,10 +3,6 @@ import ReactMapGL, { Marker } from "react-map-gl";
 import "./App.css";
 import Colorbar from "./components/Colorbar.js";
 import axios from "axios";
-import * as berlindata from "./berlinLocationTest.json";
-
-// import Places from "./components/Places.js";
-
 import Places from "./components/Places.js";
 // import Navbar from "./components/Navbar.js";
 import NavbarTest from "./components/NavbarTest";
