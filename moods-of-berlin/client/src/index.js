@@ -13,8 +13,8 @@ ReactDOM.render(
     <div>
       <Route exact path="/" component={HomeTest} />
       <Route exact path="/about" component={AboutTest} />
-      <Route exact path="/api/places" component={App} />
-      <Route exact path="/api/places/protected" component={ProtectedAreaTest} />
+      <Route exact path="/places" component={App} />
+      <Route exact path="/places/protected" component={ProtectedAreaTest} />
     </div>
   </BrowserRouter>,
   document.getElementById("root")

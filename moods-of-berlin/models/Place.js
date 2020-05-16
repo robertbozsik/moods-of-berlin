@@ -22,7 +22,7 @@ const placeSchema = new Schema(
     street: String,
     zip: String,
     city: String,
-    review: [String],
+    // review: [String], // nice t have
     // owner: { type: Schema.Types.ObjectId, ref: 'User' },
   },
   {

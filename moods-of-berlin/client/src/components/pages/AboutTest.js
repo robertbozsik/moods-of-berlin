@@ -1,9 +1,11 @@
 import React from "react";
 import NavbarTest from "../NavbarTest";
+import Navbar from "../Navbar";
 
 const AboutTest = (props) => {
   return (
     <React.Fragment>
+      <Navbar />
       <NavbarTest />
       <h1>About</h1>
       <p>

@@ -1,9 +1,11 @@
 import React from "react";
 import NavbarTest from "../NavbarTest";
+import Navbar from "../Navbar";
 
 const HomeTest = (props) => {
   return (
     <div>
+      <Navbar />
       <NavbarTest />
       <h1>Home</h1>
       <p>

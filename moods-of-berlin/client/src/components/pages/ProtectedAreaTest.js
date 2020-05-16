@@ -1,9 +1,11 @@
 import React from "react";
 import NavbarTest from "../NavbarTest";
+import Navbar from "../Navbar";
 
 const ProtectedAreaTest = (props) => {
   return (
     <div>
+      <Navbar />
       <NavbarTest />
       <h1>Protected Area</h1>
       <p1>

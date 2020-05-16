@@ -2,19 +2,15 @@ import React from "react";
 
 const Colorbar = (props) => {
   return (
-    <div>
-      <body>
-        <div class="container">
-          <div class="box">joyful</div>
-          <div class="box">relaxed</div>
-          <div class="box">energetic</div>
-          <div class="box">bored</div>
-          <div class="box">thoughtful</div>
-          <div class="box">melancholic</div>
-          <div class="box">anxious</div>
-          <div class="box">angry</div>
-        </div>
-      </body>
+    <div className="container">
+      <div className="box">joyful</div>
+      <div className="box">relaxed</div>
+      <div className="box">energetic</div>
+      <div className="box">bored</div>
+      <div className="box">thoughtful</div>
+      <div className="box">melancholic</div>
+      <div className="box">anxious</div>
+      <div className="box">angry</div>
     </div>
   );
 };

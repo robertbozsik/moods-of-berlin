@@ -1,11 +1,12 @@
 import React, { Component, Fragment, useState } from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
+import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import Colorbar from "./components/Colorbar.js";
-import axios from "axios";
+// import axios from "axios";
 import Places from "./components/Places.js";
-// import Navbar from "./components/Navbar.js";
 import NavbarTest from "./components/NavbarTest";
+import Navbar from "./components/Navbar";
 
 export default function App() {
   const [viewport, setViewport] = useState({
@@ -18,10 +19,15 @@ export default function App() {
 
   return (
     <Fragment>
-      {/*<Navbar />
-    <Places />*/}
+      <Navbar />
+
       <NavbarTest />
+
       <h1>Moods of Berlin</h1>
+      <p>
+        Here will be displayed a list of the places based on a certain mood. It
+        can be visited by every user even without sign up and login.
+      </p>
 
       <ReactMapGL
         {...viewport}
@@ -31,11 +37,9 @@ export default function App() {
           setViewport(viewport);
         }}
       ></ReactMapGL>
+
       <Colorbar />
-      <p>
-        Here will be displayed a list of the places based on a certain mood. It
-        can be visited by every user even without sign up and login.
-      </p>
+
       <Places />
     </Fragment>
   );
