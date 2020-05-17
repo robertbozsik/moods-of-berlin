@@ -1,12 +1,8 @@
 import React from "react";
-import NavbarTest from "../NavbarTest";
-import Navbar from "../Navbar";
 
-const AboutTest = (props) => {
+const AboutPage = (props) => {
   return (
     <React.Fragment>
-      <Navbar />
-      <NavbarTest />
       <h1>About</h1>
       <p>
         This is the Moods of Berlin web application v1.0.0. It is part of an
@@ -23,4 +19,4 @@ const AboutTest = (props) => {
   );
 };
 
-export default AboutTest;
+export default AboutPage;

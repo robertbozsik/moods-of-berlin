@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import PlaceList from "./PlaceList";
-// import Search from "./Search.js";
 import axios from "axios";
+import PlaceList from "./PlaceList";
 
 class Places extends Component {
   state = {

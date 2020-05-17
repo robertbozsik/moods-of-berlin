@@ -1,4 +1,5 @@
 import React from "react";
+import "./Colorbar.css";
 
 const Colorbar = (props) => {
   return (

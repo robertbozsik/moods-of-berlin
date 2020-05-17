@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar as Nav } from "react-bootstrap";
+import "./Navbar.css";
 
 const Navbar = (props) => {
   return (
@@ -10,7 +11,7 @@ const Navbar = (props) => {
         <Link to="/">Home</Link>
       </Nav.Brand>
       <Nav.Brand>
-        <Link to="/places">Places</Link>
+        <Link to="/places">Places By Mood</Link>
       </Nav.Brand>
       <Nav.Brand>
         <Link to="/about">About</Link>
@@ -20,9 +21,6 @@ const Navbar = (props) => {
       </Nav.Brand>
       <Nav.Brand>
         <Link to="/login">Login</Link>
-      </Nav.Brand>
-      <Nav.Brand>
-        <Link to="/places/protected">Protected Area</Link>
       </Nav.Brand>
       <Nav.Brand>
         <Link to="/">Logout</Link>
