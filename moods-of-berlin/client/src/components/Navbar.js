@@ -2,29 +2,52 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar as Nav } from "react-bootstrap";
 import "./Navbar.css";
+import { logout } from "../services/auth";
+
+const handleLogout = (props) => {
+  logout().then(() => {
+    props.setUser(null);
+  });
+};
 
 const Navbar = (props) => {
   return (
     <Nav className="nav justify-content-end" bg="primary">
       <Nav.Brand>MOODS OF BERLIN</Nav.Brand>
+
+      {props.user && <Nav.Brand>Welcome {props.user.username}</Nav.Brand>}
+
       <Nav.Brand>
         <Link to="/">Home</Link>
       </Nav.Brand>
-      <Nav.Brand>
-        <Link to="/places">Places By Mood</Link>
-      </Nav.Brand>
+
       <Nav.Brand>
         <Link to="/about">About</Link>
       </Nav.Brand>
-      <Nav.Brand>
-        <Link to="/signup">Sign Up</Link>
-      </Nav.Brand>
-      <Nav.Brand>
-        <Link to="/login">Login</Link>
-      </Nav.Brand>
-      <Nav.Brand>
-        <Link to="/">Logout</Link>
-      </Nav.Brand>
+
+      {props.user ? (
+        <React.Fragment>
+          <Nav.Brand>
+            <Link to="/places">Places By Mood</Link>
+          </Nav.Brand>
+
+          <Nav.Brand>
+            <Link to="/" onClick={() => handleLogout(props)}>
+              Logout
+            </Link>
+          </Nav.Brand>
+        </React.Fragment>
+      ) : (
+        <React.Fragment>
+          <Nav.Brand>
+            <Link to="/signup">Signup</Link>
+          </Nav.Brand>
+
+          <Nav.Brand>
+            <Link to="/login">Login</Link>
+          </Nav.Brand>
+        </React.Fragment>
+      )}
     </Nav>
   );
 };

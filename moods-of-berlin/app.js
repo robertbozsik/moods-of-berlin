@@ -32,6 +32,7 @@ const debug = require("debug")(
 
 const app = express();
 
+// Authorization
 const session = require("express-session");
 const passport = require("passport");
 
