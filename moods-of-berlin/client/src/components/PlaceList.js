@@ -18,9 +18,7 @@ const PlaceList = (props) => {
                 ></img>
                 <div className="card-body">
                   <h5 className="card-title">
-                    <h3>
-                      <Link to={`/places/${place._id}`}>{place.title}</Link>
-                    </h3>
+                    <h3>{place.title}</h3>
                     <b>Mood: </b> {place.mood}
                   </h5>
                   <p className="card-text">
@@ -32,9 +30,11 @@ const PlaceList = (props) => {
                   </p>
                 </div>
                 <div className="card-footer">
-                  <button type="button" className="btn btn-info btn-block">
-                    See place
-                  </button>
+                  <Link to={`/places/${place._id}`}>
+                    <button type="button" className="btn btn-info btn-block">
+                      See place
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

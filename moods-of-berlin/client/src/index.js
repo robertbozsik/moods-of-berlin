@@ -8,6 +8,7 @@ import HomeTest from "./components/pages/HomeTest";
 import AboutTest from "./components/pages/AboutTest";
 import ProtectedAreaTest from "./components/pages/ProtectedAreaTest";
 import PlaceDetails from "./components/PlaceDetails";
+import AddPlaceForm from "./components/pages/AddPlaceForm";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -15,6 +16,7 @@ ReactDOM.render(
       <Route exact path="/" component={HomeTest} />
       <Route exact path="/about" component={AboutTest} />
       <Route exact path="/places" component={App} />
+      <Route exact path="/addPlace" component={AddPlaceForm} />
       <Route exact path="/places/protected" component={ProtectedAreaTest} />
       <Route exact path="/places/:id" component={PlaceDetails} />
     </div>

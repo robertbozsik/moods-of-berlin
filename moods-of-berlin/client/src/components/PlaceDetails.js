@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
+import EditPlace from "./EditPlace";
 
 class PlaceDetails extends Component {
   constructor(props) {
@@ -25,6 +26,19 @@ class PlaceDetails extends Component {
   componentDidMount() {
     this.getSinglePlace();
   }
+
+  // DELETE PLACE:
+  deletePlace = () => {
+    const { params } = this.props.match;
+    axios
+      .delete(`/api/places/${params.id}`)
+      .then(() => {
+        this.props.history.push("/places"); // !!!
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   render() {
     console.log("<Places/> RENDER");
@@ -55,12 +69,24 @@ class PlaceDetails extends Component {
             </p>
           </div>
           <div className="card-footer">
-            <button type="button" className="btn btn-danger mx-1">
+            <button type="button" className="btn btn-info mx-1">
               Edit
             </button>
-            <button type="button" className="btn btn-info mx-1">
+
+            <button
+              type="button"
+              className="btn btn-danger mx-1"
+              onClick={() => this.deletePlace()}
+            >
               Delete
             </button>
+            <br></br>
+
+            <EditPlace
+              thePlace={this.state}
+              getThePlace={this.getSinglePlace}
+              {...this.props}
+            />
           </div>
         </div>
       </div>
