@@ -9,7 +9,7 @@ const NavbarTest = (props) => {
         Home
       </Link>{" "}
       |{" "}
-      <Link style={linkStyle} to="/api/places">
+      <Link style={linkStyle} to="/places">
         Places
       </Link>{" "}
       |{" "}

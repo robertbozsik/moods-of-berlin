@@ -7,14 +7,16 @@ import App from "./App";
 import HomeTest from "./components/pages/HomeTest";
 import AboutTest from "./components/pages/AboutTest";
 import ProtectedAreaTest from "./components/pages/ProtectedAreaTest";
+import PlaceDetails from "./components/PlaceDetails";
 
 ReactDOM.render(
   <BrowserRouter>
     <div>
       <Route exact path="/" component={HomeTest} />
       <Route exact path="/about" component={AboutTest} />
-      <Route exact path="/api/places" component={App} />
-      <Route exact path="/api/places/protected" component={ProtectedAreaTest} />
+      <Route exact path="/places" component={App} />
+      <Route exact path="/places/protected" component={ProtectedAreaTest} />
+      <Route exact path="/places/:id" component={PlaceDetails} />
     </div>
   </BrowserRouter>,
   document.getElementById("root")

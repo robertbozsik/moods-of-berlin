@@ -6,6 +6,7 @@ import axios from "axios";
 import Places from "./components/Places.js";
 // import Navbar from "./components/Navbar.js";
 import NavbarTest from "./components/NavbarTest";
+import PlaceDetails from "./components/PlaceDetails";
 
 export default function App() {
   const [viewport, setViewport] = useState({
