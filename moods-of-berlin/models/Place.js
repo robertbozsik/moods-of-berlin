@@ -22,8 +22,8 @@ const placeSchema = new Schema(
     street: String,
     zip: String,
     city: String,
-    // review: [String], // nice t have
-    // owner: { type: Schema.Types.ObjectId, ref: 'User' },
+    // review: [String], // nice to have
+    owner: { type: Schema.Types.ObjectId, ref: "User" },
   },
   {
     timestamps: { createdAt: "created_at", updatedAt: "updated_at" },
