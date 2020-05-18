@@ -13,9 +13,9 @@ export default function App() {
         can be visited by every user even without sign up and login.
       </p>
 
-      <Colorbar />
-
       <Map />
+
+      <Colorbar />
 
       <Places />
     </Fragment>
