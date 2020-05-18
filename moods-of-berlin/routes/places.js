@@ -15,6 +15,8 @@ router.post("/", (req, res) => {
     review,
   } = req.body;
 
+  const owner = req.user._id;
+
   Place.create({
     title,
     description,
@@ -24,6 +26,7 @@ router.post("/", (req, res) => {
     zip,
     city,
     review,
+    owner,
   })
     .then((place) => {
       res.status(201).json(place);

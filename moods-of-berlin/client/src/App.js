@@ -1,42 +1,53 @@
-import React, { Component, Fragment, useState } from "react";
-import ReactMapGL, { Marker } from "react-map-gl";
+import React, { Component } from "react";
+import { Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
-import Colorbar from "./components/Colorbar.js";
-import axios from "axios";
-import Places from "./components/Places.js";
-// import Navbar from "./components/Navbar.js";
-import NavbarTest from "./components/NavbarTest";
+import Navbar from "./components/Navbar";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import PlacesByMoodPage from "./pages/PlacesByMoodPage";
+import Signup from "./components/Signup";
+import Login from "./components/Login";
+import Footer from "./components/Footer";
 
-export default function App() {
-  const [viewport, setViewport] = useState({
-    latitude: 52.5170365,
-    longitude: 13.3888599,
-    width: "100vw",
-    height: "50vh",
-    zoom: 10,
-  });
+export class App extends Component {
+  state = {
+    user: this.props.user,
+  };
 
-  return (
-    <Fragment>
-      {/*<Navbar />
-    <Places />*/}
-      <NavbarTest />
-      <h1>Moods of Berlin</h1>
+  setUser = (user) => {
+    this.setState({
+      user: user,
+    });
+  };
 
-      <ReactMapGL
-        {...viewport}
-        mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-        mapStyle="mapbox://styles/benchberlin/cka8f1pe629161iqu0304nkde"
-        onViewportChange={(viewport) => {
-          setViewport(viewport);
-        }}
-      ></ReactMapGL>
-      <Colorbar />
-      <p>
-        Here will be displayed a list of the places based on a certain mood. It
-        can be visited by every user even without sign up and login.
-      </p>
-      <Places />
-    </Fragment>
-  );
+  render() {
+    return (
+      <div>
+        <Navbar user={this.state.user} setUser={this.setUser} />
+
+        <Route exact path="/" component={HomePage} />
+
+        <Route exact path="/about" component={AboutPage} />
+
+        <Route exact path="/places" component={PlacesByMoodPage} />
+
+        <Route
+          exact
+          path="/signup"
+          render={(props) => <Signup setUser={this.setUser} {...props} />}
+        />
+
+        <Route
+          exact
+          path="/login"
+          render={(props) => <Login setUser={this.setUser} {...props} />}
+        />
+
+        <Footer />
+      </div>
+    );
+  }
 }
+
+export default App;

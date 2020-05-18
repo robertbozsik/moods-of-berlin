@@ -1,17 +1,18 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import PlaceList from "./PlaceList";
-// import Search from "./Search.js";
 import axios from "axios";
+import PlaceList from "./PlaceList";
+
 class Places extends Component {
   state = {
     places: [],
   };
+
   getAllPlaces = () => {
     axios
-      .get(`/api/places`)
+      .get("/api/places")
       .then((responseFromApi) => {
-        console.log(responseFromApi);
+        console.log(responseFromApi.data);
         this.setState({
           places: responseFromApi.data,
         });
@@ -20,9 +21,11 @@ class Places extends Component {
         console.log(err);
       });
   };
+
   componentDidMount() {
     this.getAllPlaces();
   }
+
   render() {
     console.log("<Places/> RENDER");
     console.log(this.state);

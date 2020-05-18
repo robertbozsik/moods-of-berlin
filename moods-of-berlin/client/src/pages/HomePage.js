@@ -1,10 +1,8 @@
 import React from "react";
-import NavbarTest from "../NavbarTest";
 
-const HomeTest = (props) => {
+const HomePage = (props) => {
   return (
     <div>
-      <NavbarTest />
       <h1>Home</h1>
       <p>
         This will be our home page, can be visited by every user even without
@@ -21,4 +19,4 @@ const HomeTest = (props) => {
   );
 };
 
-export default HomeTest;
+export default HomePage;
