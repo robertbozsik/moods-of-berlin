@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class Search extends Component {
   handleChange = (event) => {
-    this.props.handleSearchBar(event.target.value);
+    this.props.triggerSetQuery(event.target.value);
   };
 
   render() {
@@ -10,8 +10,8 @@ export default class Search extends Component {
       <div>
         <input
           type="text"
-          name="searchbar"
-          value={this.props.searchbar}
+          name="query"
+          value={this.props.query}
           onChange={this.handleChange}
         />
       </div>

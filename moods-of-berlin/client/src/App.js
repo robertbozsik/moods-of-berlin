@@ -9,6 +9,8 @@ import PlacesByMoodPage from "./pages/PlacesByMoodPage";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import Footer from "./components/Footer";
+import AddPlaceForm from "./pages/AddPlaceForm";
+import PlaceDetails from "./components/PlaceDetails";
 
 export class App extends Component {
   state = {
@@ -31,6 +33,10 @@ export class App extends Component {
         <Route exact path="/about" component={AboutPage} />
 
         <Route exact path="/places" component={PlacesByMoodPage} />
+
+        <Route exact path="/addPlace" component={AddPlaceForm} />
+
+        <Route exact path="/places/:id" component={PlaceDetails} />
 
         <Route
           exact
