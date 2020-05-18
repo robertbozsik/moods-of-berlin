@@ -46,6 +46,8 @@ class AddPlace extends Component {
           zip: "",
           city: "",
         });
+        // after submitting the form, redirect to '/places'
+        this.props.history.push("/places");
       })
       .catch((error) => console.log(error));
   };
@@ -60,32 +62,63 @@ class AddPlace extends Component {
       <div>
         <form onSubmit={this.handleFormSubmit}>
           <div className="form-group">
-            <label>Title:</label>
-            <input
-              type="text"
-              name="title"
-              value={this.state.title}
-              onChange={(e) => this.handleChange(e)}
-            />
+            <div className="input-group mb-3">
+              <div className="input-group-prepend">
+                <span className="input-group-text" id="basic-addon1">
+                  Title:
+                </span>
+              </div>
+              <input
+                type="text"
+                name="title"
+                value={this.state.title}
+                onChange={(e) => this.handleChange(e)}
+                className="form-control"
+                placeholder="Title"
+                aria-label="Title"
+                aria-describedby="basic-addon1"
+              />
+            </div>
           </div>
-          <div className="form-group">
-            <label>Description:</label>
+
+          <div className="input-group my-2">
+            <div className="input-group-prepend">
+              <span className="input-group-text">Description:</span>
+            </div>
             <textarea
               type="text"
               name="description"
               value={this.state.description}
               onChange={(e) => this.handleChange(e)}
-            />
+              className="form-control"
+              aria-label="Description"
+            ></textarea>
           </div>
+
           <div className="form-group">
-            <label>Mood:</label>
-            <input
-              type="text"
-              name="mood"
-              value={this.state.mood}
-              onChange={(e) => this.handleChange(e)}
-            />
+            <div className="input-group mb-3">
+              <div className="input-group-prepend">
+                <label className="input-group-text">Mood:</label>
+              </div>
+              <select
+                className="custom-select"
+                value={this.state.mood}
+                name="mood"
+                onChange={(e) => this.handleChange(e)}
+              >
+                <option selected>Choose...</option>
+                <option value="joyful">joyful</option>
+                <option value="relaxed">relaxed</option>
+                <option value="energetic">energetic</option>
+                <option value="bored">bored</option>
+                <option value="thoughtful">thoughtful</option>
+                <option value="melancholic">melancholic</option>
+                <option value="anxious">anxious</option>
+                <option value="angry">angry</option>
+              </select>
+            </div>
           </div>
+
           <div className="form-group">
             <label>Image:</label>
             <textarea
@@ -95,35 +128,69 @@ class AddPlace extends Component {
               onChange={(e) => this.handleChange(e)}
             />
           </div>
+
           <div className="form-group">
-            <label>Street:</label>
-            <input
-              type="text"
-              name="street"
-              value={this.state.street}
-              onChange={(e) => this.handleChange(e)}
-            />
-          </div>
-          <div className="form-group">
-            <label>Zip:</label>
-            <textarea
-              type="text"
-              name="zip"
-              value={this.state.zip}
-              onChange={(e) => this.handleChange(e)}
-            />
-          </div>
-          <div className="form-group">
-            <label>City:</label>
-            <input
-              type="text"
-              name="city"
-              value={this.state.city}
-              onChange={(e) => this.handleChange(e)}
-            />
+            <div className="input-group mb-3">
+              <div className="input-group-prepend">
+                <span className="input-group-text" id="basic-addon1">
+                  Street:
+                </span>
+              </div>
+              <input
+                type="text"
+                name="street"
+                value={this.state.street}
+                onChange={(e) => this.handleChange(e)}
+                className="form-control"
+                placeholder="Street"
+                aria-label="Street"
+                aria-describedby="basic-addon1"
+              />
+            </div>
           </div>
 
-          <input type="submit" value="Submit" />
+          <div className="form-group">
+            <div className="input-group mb-3">
+              <div className="input-group-prepend">
+                <span className="input-group-text" id="basic-addon1">
+                  Zip:
+                </span>
+              </div>
+              <input
+                type="text"
+                name="zip"
+                value={this.state.zip}
+                onChange={(e) => this.handleChange(e)}
+                className="form-control"
+                placeholder="Zip"
+                aria-label="Zip"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+          </div>
+
+          <div className="form-group">
+            <div className="input-group mb-3">
+              <div className="input-group-prepend">
+                <label className="input-group-text">City:</label>
+              </div>
+              <select
+                className="custom-select"
+                value={this.state.city}
+                name="city"
+                onChange={(e) => this.handleChange(e)}
+              >
+                <option selected>Choose...</option>
+                <option value="berlin">Berlin</option>
+              </select>
+            </div>
+          </div>
+
+          <input
+            className="btn btn-success btn-lg m-3"
+            type="submit"
+            value="Submit"
+          />
         </form>
       </div>
     );

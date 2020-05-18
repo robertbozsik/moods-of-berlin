@@ -47,7 +47,7 @@ class PlaceDetails extends Component {
       <div>
         <div
           className="card"
-          style={{ margin: "1em auto", width: "50%" }}
+          style={{ margin: "1em auto", width: "80%" }}
           key={this.state._id}
         >
           <img

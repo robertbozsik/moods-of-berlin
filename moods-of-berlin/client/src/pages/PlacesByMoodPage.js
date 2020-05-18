@@ -19,7 +19,7 @@ export default function App() {
       <Colorbar />
 
       <div className="alert alert-success mx-4" role="alert">
-        <h4 class="alert-heading">Moods of Berlin</h4>
+        <h4 className="alert-heading">Moods of Berlin</h4>
         <p>
           Here will be displayed a list of the places based on a certain mood.
           It can be visited by every user even without sign up and login.
