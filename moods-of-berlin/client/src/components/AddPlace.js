@@ -55,6 +55,26 @@ class AddPlace extends Component {
     this.setState({ [name]: value });
   };
 
+  fileSelectHandler = (e) => {
+    const files = e.target.files;
+    const data = new FormData();
+    data.append("file", files[0]);
+    data.append("upload_preset", "moods-of-berlin");
+
+    fetch("https://api.cloudinary.com/v1_1/benchberlin/image/upload ", {
+      method: "POST",
+      body: data,
+    }).then((res) => {
+      res.json().then((file) => {
+        console.log(this);
+        console.log(file.secure_url);
+        this.setState({
+          imgPath: file.secure_url,
+        });
+      });
+    });
+  };
+
   render() {
     return (
       <div>
@@ -88,11 +108,10 @@ class AddPlace extends Component {
           </div>
           <div className="form-group">
             <label>Image:</label>
-            <textarea
-              type="text"
+            <input
+              type="file"
               name="imgPath"
-              value={this.state.imgPath}
-              onChange={(e) => this.handleChange(e)}
+              onChange={this.fileSelectHandler}
             />
           </div>
           <div className="form-group">
