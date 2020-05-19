@@ -14,7 +14,7 @@ class PlaceDetails extends Component {
     axios
       .get(`/api/places/${params.id}`)
       .then((responseFromApi) => {
-        console.log(responseFromApi);
+        // console.log(responseFromApi);
         const thePlace = responseFromApi.data;
         this.setState(thePlace);
       })
@@ -41,7 +41,14 @@ class PlaceDetails extends Component {
   };
 
   render() {
-    console.log("<Places/> RENDER");
+    // console.log("<Places/> RENDER");
+
+    let allowedToEditOrDelete = false;
+    const user = this.props.user;
+    // console.log("user:", user);
+    const owner = this.state.owner;
+    // console.log("owner", owner);
+    if (user && user._id === owner) allowedToEditOrDelete = true;
 
     return (
       <div>
@@ -55,39 +62,48 @@ class PlaceDetails extends Component {
             src={this.state.imgPath}
             alt={this.state.title}
           ></img>
+
           <div className="card-body">
             <h5 className="card-title">{this.state.title} </h5>
             <br></br>
+
             <p>
               <b>Mood: </b> {this.state.mood}
             </p>
 
-            <p className="card-text">{this.state.description}</p>
+            <p className="card-text">
+              <b>Description: </b> {this.state.description}
+            </p>
+
             <p>
               <b>Address: </b>
               {this.state.street} {this.state.zip} {this.state.city}
             </p>
           </div>
-          <div className="card-footer">
-            <button type="button" className="btn btn-info mx-1">
-              Edit
-            </button>
 
-            <button
-              type="button"
-              className="btn btn-danger mx-1"
-              onClick={() => this.deletePlace()}
-            >
-              Delete
-            </button>
-            <br></br>
+          {/* Only the owner is allowed to edit or delete a place */}
+          {allowedToEditOrDelete && (
+            <div className="card-footer">
+              <button type="button" className="btn btn-info mx-1">
+                Edit
+              </button>
 
-            <EditPlace
-              thePlace={this.state}
-              getThePlace={this.getSinglePlace}
-              {...this.props}
-            />
-          </div>
+              <button
+                type="button"
+                className="btn btn-danger mx-1"
+                onClick={() => this.deletePlace()}
+              >
+                Delete
+              </button>
+              <br></br>
+
+              <EditPlace
+                thePlace={this.state}
+                getThePlace={this.getSinglePlace}
+                {...this.props}
+              />
+            </div>
+          )}
         </div>
       </div>
     );

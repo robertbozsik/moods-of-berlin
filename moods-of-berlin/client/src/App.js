@@ -11,6 +11,7 @@ import Login from "./components/Login";
 import Footer from "./components/Footer";
 import AddPlaceForm from "./pages/AddPlaceForm";
 import PlaceDetails from "./components/PlaceDetails";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 export class App extends Component {
   state = {
@@ -32,11 +33,21 @@ export class App extends Component {
 
         <Route exact path="/about" component={AboutPage} />
 
-        <Route exact path="/places" component={PlacesByMoodPage} />
+        <ProtectedRoute
+          exact
+          path="/places"
+          user={this.state.user}
+          component={PlacesByMoodPage}
+        />
 
         <Route exact path="/addPlace" component={AddPlaceForm} />
 
-        <Route exact path="/places/:id" component={PlaceDetails} />
+        <Route
+          exact
+          path="/places/:id"
+          // This is the correct way to send porps down
+          render={(props) => <PlaceDetails user={this.state.user} {...props} />}
+        />
 
         <Route
           exact
