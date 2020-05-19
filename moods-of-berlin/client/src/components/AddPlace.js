@@ -140,12 +140,18 @@ class AddPlace extends Component {
           </div>
 
           <div className="form-group">
-            <label>Image:</label>
-            <input
-              type="file"
-              name="imgPath"
-              onChange={this.fileSelectHandler}
-            />
+            <div className="input-group-prepend">
+              <span className="input-group-text" id="basic-addon1">
+                Image:
+              </span>
+
+              <input
+                className="mx-3"
+                type="file"
+                name="imgPath"
+                onChange={this.fileSelectHandler}
+              />
+            </div>
           </div>
 
           <div className="form-group">

@@ -1,19 +1,49 @@
-import React from "react";
+import React, { Component } from "react";
 import "./Colorbar.css";
 
-const Colorbar = (props) => {
-  return (
-    <div className="container">
-      <div className="box">joyful</div>
-      <div className="box">relaxed</div>
-      <div className="box">energetic</div>
-      <div className="box">bored</div>
-      <div className="box">thoughtful</div>
-      <div className="box">melancholic</div>
-      <div className="box">anxious</div>
-      <div className="box">angry</div>
-    </div>
-  );
-};
+class Colorbar extends Component {
+  render() {
+    return (
+      <div className="container">
+        <button className="box" name="joyful" onClick={this.props.changeMood}>
+          joyful
+        </button>
+        <button className="box" name="relaxed" onClick={this.props.changeMood}>
+          relaxed
+        </button>
+        <button
+          className="box"
+          name="energetic"
+          onClick={this.props.changeMood}
+        >
+          energetic
+        </button>
+        <button className="box" name="bored" onClick={this.props.changeMood}>
+          bored
+        </button>
+        <button
+          className="box"
+          name="thoughtful"
+          onClick={this.props.changeMood}
+        >
+          thoughtful
+        </button>
+        <button
+          className="box"
+          name="melancholic"
+          onClick={this.props.changeMood}
+        >
+          melancholic
+        </button>
+        <button className="box" name="anxious" onClick={this.props.changeMood}>
+          anxious
+        </button>
+        <button className="box" name="angry" onClick={this.props.changeMood}>
+          angry
+        </button>
+      </div>
+    );
+  }
+}
 
 export default Colorbar;

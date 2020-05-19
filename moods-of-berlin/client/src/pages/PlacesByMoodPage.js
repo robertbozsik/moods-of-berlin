@@ -16,8 +16,6 @@ export default function App() {
 
       <Map />
 
-      <Colorbar />
-
       <div className="alert alert-success mx-4" role="alert">
         <h4 className="alert-heading">Moods of Berlin</h4>
         <p>
