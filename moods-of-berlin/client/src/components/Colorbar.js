@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import "./Colorbar.css";
+import "bootstrap/dist/css/bootstrap.css";
 
 class Colorbar extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="container-boxes">
         <button className="box" name="joyful" onClick={this.props.changeMood}>
           joyful
         </button>

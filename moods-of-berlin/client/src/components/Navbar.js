@@ -12,7 +12,7 @@ const handleLogout = (props) => {
 
 const Navbar = (props) => {
   return (
-    <Nav className="nav justify-content-end" bg="primary">
+    <Nav className="nav justify-content-end" bg="secondary">
       <Nav.Brand>MOODS OF BERLIN</Nav.Brand>
 
       {props.user && <Nav.Brand>Welcome {props.user.username}</Nav.Brand>}
