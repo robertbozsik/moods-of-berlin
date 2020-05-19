@@ -2,83 +2,43 @@ import React, { Component } from "react";
 import "./Colorbar.css";
 
 class Colorbar extends Component {
-  state = {
-    mood: "",
-  };
-
-  sendJoyful = () => {
-    this.setState({
-      mood: "joyful",
-    });
-  };
-
-  sendRelaxed = () => {
-    this.setState({
-      mood: "relaxed",
-    });
-  };
-
-  sendEnergetic = () => {
-    this.setState({
-      mood: "energetic",
-    });
-  };
-
-  sendBored = () => {
-    this.setState({
-      mood: "bored",
-    });
-  };
-
-  sendThoughtful = () => {
-    this.setState({
-      mood: "thoughtful",
-    });
-  };
-
-  sendMelancholic = () => {
-    this.setState({
-      mood: "melancholic",
-    });
-  };
-
-  sendAnxious = () => {
-    this.setState({
-      mood: "anxious",
-    });
-  };
-
-  sendAngry = () => {
-    this.setState({
-      mood: "angry",
-    });
-  };
-
   render() {
     return (
       <div className="container">
-        <button className="box" onClick={this.sendJoyful}>
+        <button className="box" name="joyful" onClick={this.props.changeMood}>
           joyful
         </button>
-        <button className="box" onClick={this.sendRelaxed}>
+        <button className="box" name="relaxed" onClick={this.props.changeMood}>
           relaxed
         </button>
-        <button className="box" onClick={this.sendEnergetic}>
+        <button
+          className="box"
+          name="energetic"
+          onClick={this.props.changeMood}
+        >
           energetic
         </button>
-        <button className="box" onClick={this.sendBored}>
+        <button className="box" name="bored" onClick={this.props.changeMood}>
           bored
         </button>
-        <button className="box" onClick={this.sendThoughtful}>
+        <button
+          className="box"
+          name="thoughtful"
+          onClick={this.props.changeMood}
+        >
           thoughtful
         </button>
-        <button className="box" onClick={this.sendMelancholic}>
+        <button
+          className="box"
+          name="melancholic"
+          onClick={this.props.changeMood}
+        >
           melancholic
         </button>
-        <button className="box" onClick={this.sendAnxious}>
+        <button className="box" name="anxious" onClick={this.props.changeMood}>
           anxious
         </button>
-        <button className="box" onClick={this.sendAngry}>
+        <button className="box" name="angry" onClick={this.props.changeMood}>
           angry
         </button>
       </div>
