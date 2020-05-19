@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import PlaceList from "./PlaceList";
@@ -39,4 +40,4 @@ class Places extends Component {
   }
 }
 
-export default Places;
+export default withRouter(Places);
