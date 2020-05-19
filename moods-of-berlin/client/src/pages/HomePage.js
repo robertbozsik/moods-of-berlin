@@ -1,20 +1,28 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
 
 const HomePage = (props) => {
   return (
-    <div>
-      <h1>Home</h1>
-      <p>
-        This will be our home page, can be visited by every user even without
-        sign up and login.
-      </p>
-      <h2>This part of the app will consist of: </h2>
-      <ul>
-        <li>Navbar: logo, home, (login, signup, logout)</li>
-        <li>Section1: background-color, img, text</li>
-        <li>Section2: links (text, bg photo, bg color with opacity), text</li>
-        <li>And maybe a footer with our names and a copyright</li>
-      </ul>
+    <div className="slider">
+      <div className="bg-info row d-flex">
+        <div className="col-6 px-5">
+          <img
+            src="\Plutchik-wheel.png"
+            class="img-fluid p-5"
+            alt="Responsive image"
+          ></img>
+        </div>
+        <div className="col-6 align-self-center">
+          <h6 className="text-white">How do you feel today?</h6>
+          <h1 className="text-white title">Moods of Berlin</h1>
+          <h6 className="text-white">what would you like to do?</h6>
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col-lg-6">COLOR SQUARES</div>
+        <div className="col-lg-6">INTRO TEXT</div>
+      </div>
     </div>
   );
 };
