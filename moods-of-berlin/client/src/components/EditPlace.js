@@ -87,6 +87,26 @@ class EditPlace extends Component {
     });
   };
 
+  fileSelectHandler = (e) => {
+    const files = e.target.files;
+    const data = new FormData();
+    data.append("file", files[0]);
+    data.append("upload_preset", "moods-of-berlin");
+
+    fetch("https://api.cloudinary.com/v1_1/benchberlin/image/upload ", {
+      method: "POST",
+      body: data,
+    }).then((res) => {
+      res.json().then((file) => {
+        console.log(this);
+        console.log(file.secure_url);
+        this.setState({
+          imgPath: file.secure_url,
+        });
+      });
+    });
+  };
+
   render() {
     return (
       <div>
@@ -149,14 +169,20 @@ class EditPlace extends Component {
             </div>
           </div>
           <div className="form-group">
-            <label>Image:</label>
-            <textarea
-              type="text"
-              name="imgPath"
-              value={this.state.imgPath}
-              onChange={(e) => this.handleChangeImgPath(e)}
-            />
+            <div className="input-group-prepend">
+              <span className="input-group-text" id="basic-addon1">
+                Image:
+              </span>
+
+              <input
+                className="mx-3"
+                type="file"
+                name="imgPath"
+                onChange={this.fileSelectHandler}
+              />
+            </div>
           </div>
+
           <div className="form-group">
             <div className="input-group mb-3">
               <div className="input-group-prepend">
