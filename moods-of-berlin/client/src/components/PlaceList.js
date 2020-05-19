@@ -9,24 +9,20 @@ const PlaceList = (props) => {
       <div className="card-columns" style={{ margin: "0 35px" }}>
         {props.places.map((place) => {
           return (
-            <div>
-              <div className="card" key={place._id}>
+            <div key={place._id}>
+              <div className="card">
                 <img
                   className="card-img-top"
                   src={place.imgPath}
                   alt={place.title}
                 ></img>
                 <div className="card-body">
-                  <h5 className="card-title">
-                    <h3>{place.title}</h3>
-                    <b>Mood: </b> {place.mood}
-                  </h5>
+                  <h5 className="card-title">{place.title}</h5>
+                  <b>Mood: </b> {place.mood}
                   <p className="card-text">
                     {" "}
-                    <p>
-                      <b>Address: </b>
-                      {place.street} {place.zip} {place.city}
-                    </p>
+                    <b>Address: </b>
+                    {place.street} {place.zip} {place.city}
                   </p>
                 </div>
                 <div className="card-footer">

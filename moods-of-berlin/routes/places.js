@@ -47,6 +47,18 @@ router.get("/", (req, res) => {
     });
 });
 
+// return  places by mood
+router.get("/moods", (req, res) => {
+  const mood = req.query.mood;
+  Place.find({ mood: mood })
+    .then((places) => {
+      res.status(200).json(places);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
+});
+
 // return the specified place
 router.get("/:id", (req, res) => {
   // check if req.params.id is valid, if not respond with a 4xx status code
