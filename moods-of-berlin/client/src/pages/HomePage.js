@@ -5,16 +5,16 @@ import { Link } from "react-router-dom";
 
 const HomePage = (props) => {
   return (
-    <div className="slider">
+    <div className="slider" style={{ borderTop: "solid 2px white" }}>
       <div className="bg-info row d-flex">
-        <div className="col-6 px-5">
+        <div className="col-lg-6 px-5">
           <img
             src="\Plutchik-wheel.png"
             className="img-fluid p-5"
             alt="Responsive image"
           ></img>
         </div>
-        <div className="col-6 align-self-center">
+        <div className="col-lg-6 align-self-center">
           <h6 style={{ fontSize: "2rem" }} className="text-white display-4">
             How do you feel today?
           </h6>
@@ -25,12 +25,8 @@ const HomePage = (props) => {
         </div>
       </div>
 
-      {props.user
-        ? console.log("logged user:", props.user)
-        : console.log(props.user)}
-
       <div className="row">
-        <div className="col-6 containerBox">
+        <div className="col-lg-6 containerBox">
           <div className="row">
             <div className="col-6 ">
               <div className="row">
@@ -41,31 +37,41 @@ const HomePage = (props) => {
                   </Link>
                 </div>
                 <div className="col-6">
-                  <div className="overlay-effect-green"></div>
-                  <div className="item2"></div>
+                  <Link to="/places">
+                    <div className="overlay-effect-green"></div>
+                    <div className="item2"></div>
+                  </Link>
                 </div>
               </div>
             </div>
             <div className="col-6">
-              <div className="overlay-effect-orange"></div>
-              <div className="item3"></div>
+              <Link to="/places">
+                <div className="overlay-effect-orange"></div>
+                <div className="item3"></div>
+              </Link>
             </div>
           </div>
 
           <div className="row">
             <div className="col-6 ">
-              <div className="overlay-effect-violet"></div>
-              <div className="item4"></div>
+              <Link to="/places">
+                <div className="overlay-effect-violet"></div>
+                <div className="item4"></div>
+              </Link>
             </div>
             <div className="col-6">
               <div className="row">
                 <div className="col-6">
-                  <div className="overlay-effect-turquoise"></div>
-                  <div className="item5"></div>
+                  <Link to="/places">
+                    <div className="overlay-effect-turquoise"></div>
+                    <div className="item5"></div>
+                  </Link>
                 </div>
                 <div className="col-6">
-                  <div className="overlay-effect-red"></div>
-                  <div className="item6"></div>
+                  <Link to="/places">
+                    <div className="overlay-effect-red"></div>
+                    <div className="item6"></div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -73,12 +79,16 @@ const HomePage = (props) => {
 
           <div className="row col-9 pullToTop">
             <div className="col-3">
-              <div className="overlay-effect-blue"></div>
-              <div className="item7"></div>
+              <Link to="/places">
+                <div className="overlay-effect-blue"></div>
+                <div className="item7"></div>
+              </Link>
             </div>
             <div className="col-9">
-              <div className="overlay-effect-greenyellow"></div>
-              <div className="item8"></div>
+              <Link to="/places">
+                <div className="overlay-effect-greenyellow"></div>
+                <div className="item8"></div>
+              </Link>
             </div>
           </div>
         </div>
