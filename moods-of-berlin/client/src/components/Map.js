@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
+import "./Map.css";
 
 const Map = (props) => {
   const [viewport, setViewport] = useState({
@@ -30,19 +31,79 @@ const Map = (props) => {
               latitude={place.latitude}
               longitude={place.longitude}
             >
-              <img src="./mapbox-icon.png" alt="mapbox icon" />
+              {/* <img src="./mapbox-icon.png" alt="mapbox icon" /> */}
 
-              {/*{props.mood === "relaxed" && (
-                <img src="./mapbox-icon.png" alt="mapbox icon" />
+              {props.mood === "" && (
+                <img
+                  className="map-marker"
+                  src="./1200px-Map_marker.png"
+                  alt="mapbox icon"
+                />
               )}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}
-              {}*/}
+
+              {props.mood === "joyful" && (
+                <img
+                  className="map-marker"
+                  src="./joyful_yellow_marker.png"
+                  alt="mapbox icon joyful"
+                />
+              )}
+
+              {props.mood === "relaxed" && (
+                <img
+                  className="map-marker"
+                  src="./relaxed_lightgreen_marker.png"
+                  alt="mapbox icon relaxed"
+                />
+              )}
+
+              {props.mood === "energetic" && (
+                <img
+                  className="map-marker"
+                  src="./energetic_orange_marker.png"
+                  alt="mapbox icon energetic"
+                />
+              )}
+
+              {props.mood === "bored" && (
+                <img
+                  className="map-marker"
+                  src="./bored_green_marker.png"
+                  alt="mapbox icon bored"
+                />
+              )}
+
+              {props.mood === "thoughtful" && (
+                <img
+                  className="map-marker"
+                  src="./thoughtful_turquise_marker.png"
+                  alt="mapbox icon thoughtful"
+                />
+              )}
+
+              {props.mood === "melancholic" && (
+                <img
+                  className="map-marker"
+                  src="./melancholic_blue_marker.png"
+                  alt="mapbox icon melancholic"
+                />
+              )}
+
+              {props.mood === "anxious" && (
+                <img
+                  className="map-marker"
+                  src="./anxious_violet_marker.png"
+                  alt="mapbox icon anxious"
+                />
+              )}
+
+              {props.mood === "angry" && (
+                <img
+                  className="map-marker"
+                  src="./angry_red_marker.png"
+                  alt="mapbox icon angry"
+                />
+              )}
             </Marker>
           );
         })}
