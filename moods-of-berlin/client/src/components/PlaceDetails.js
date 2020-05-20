@@ -84,10 +84,6 @@ class PlaceDetails extends Component {
           {/* Only the owner is allowed to edit or delete a place */}
           {allowedToEditOrDelete && (
             <div className="card-footer">
-              <button type="button" className="btn btn-info mx-1">
-                Edit
-              </button>
-
               <button
                 type="button"
                 className="btn btn-danger mx-1"

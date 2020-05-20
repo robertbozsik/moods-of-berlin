@@ -1,18 +1,14 @@
 import React, { Fragment } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-
-import Map from "../components/Map";
 import Places from "../components/Places.js";
 import { Link } from "react-router-dom";
 
 export default function App() {
   return (
     <Fragment>
-      <Map />
-
       <div
         className="alert alert-success"
-        style={{ marginBottom: "-1em" }}
+        style={{ margin: "30px 30px 0 30px", borderRadius: "0" }}
         role="alert"
       >
         <h4 className="alert-heading">Moods of Berlin</h4>

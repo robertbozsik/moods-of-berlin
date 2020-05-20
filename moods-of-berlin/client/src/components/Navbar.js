@@ -12,42 +12,46 @@ const handleLogout = (props) => {
 
 const Navbar = (props) => {
   return (
-    <Nav className="nav justify-content-end" bg="secondary">
-      <Nav.Brand>MOODS OF BERLIN</Nav.Brand>
+    <Nav className="nav row" bg="info">
+      <div className="col-6 pl-5">
+        <Nav.Brand>MOODS OF BERLIN</Nav.Brand>
 
-      {props.user && <Nav.Brand>Welcome {props.user.username}</Nav.Brand>}
+        {props.user && <Nav.Brand>Welcome {props.user.username}</Nav.Brand>}
+      </div>
 
-      <Nav.Brand>
-        <Link to="/">Home</Link>
-      </Nav.Brand>
+      <div className="col-6">
+        <Nav.Brand>
+          <Link to="/">Home</Link>
+        </Nav.Brand>
 
-      <Nav.Brand>
-        <Link to="/about">About</Link>
-      </Nav.Brand>
+        <Nav.Brand>
+          <Link to="/about">About</Link>
+        </Nav.Brand>
 
-      {props.user ? (
-        <React.Fragment>
-          <Nav.Brand>
-            <Link to="/places">Places By Mood</Link>
-          </Nav.Brand>
+        {props.user ? (
+          <React.Fragment>
+            <Nav.Brand>
+              <Link to="/places">Places By Mood</Link>
+            </Nav.Brand>
 
-          <Nav.Brand>
-            <Link to="/" onClick={() => handleLogout(props)}>
-              Logout
-            </Link>
-          </Nav.Brand>
-        </React.Fragment>
-      ) : (
-        <React.Fragment>
-          <Nav.Brand>
-            <Link to="/signup">Signup</Link>
-          </Nav.Brand>
+            <Nav.Brand>
+              <Link to="/" onClick={() => handleLogout(props)}>
+                Logout
+              </Link>
+            </Nav.Brand>
+          </React.Fragment>
+        ) : (
+          <React.Fragment>
+            <Nav.Brand>
+              <Link to="/signup">Signup</Link>
+            </Nav.Brand>
 
-          <Nav.Brand>
-            <Link to="/login">Login</Link>
-          </Nav.Brand>
-        </React.Fragment>
-      )}
+            <Nav.Brand>
+              <Link to="/login">Login</Link>
+            </Nav.Brand>
+          </React.Fragment>
+        )}
+      </div>
     </Nav>
   );
 };
