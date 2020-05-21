@@ -36,7 +36,7 @@ const Map = (props) => {
               {props.mood === "" && (
                 <img
                   className="map-marker"
-                  src="./1200px-Map_marker.png"
+                  src="./allColors_marker.png"
                   alt="mapbox icon"
                 />
               )}
