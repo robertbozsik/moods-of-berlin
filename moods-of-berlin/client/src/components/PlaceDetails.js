@@ -60,6 +60,7 @@ class PlaceDetails extends Component {
         >
           <img
             className="img-fluid"
+            style={{ minWidth: "100%" }}
             src={this.state.imgPath}
             alt={this.state.title}
           ></img>
