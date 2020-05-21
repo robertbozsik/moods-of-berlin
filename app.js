@@ -11,7 +11,7 @@ const path = require("path");
 
 mongoose
 
-  .connect("mongodb://localhost/moods-of-berlin", {
+  .connect(process.env.MONGODB_URI || "mongodb://localhost/moods-of-berlin", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
