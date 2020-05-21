@@ -13,7 +13,12 @@ const handleLogout = (props) => {
 const Navbar = (props) => {
   return (
     <Nav className="nav row" bg="info">
-      <div className="col-6 pl-5">
+      <div className="col-6 pl-3">
+        <img
+          className="MoodsLogo"
+          src=".\logoMoods.png"
+          alt="Logo Moods of Berlin"
+        ></img>
         <Nav.Brand>MOODS OF BERLIN</Nav.Brand>
 
         {props.user && <Nav.Brand>Welcome {props.user.username}</Nav.Brand>}
