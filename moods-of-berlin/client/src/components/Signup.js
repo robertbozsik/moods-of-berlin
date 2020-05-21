@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Button, Alert } from "react-bootstrap";
+import { Form, Button, Alert, Card } from "react-bootstrap";
 import { signup } from "../services/auth";
 
 export default class Signup extends Component {
@@ -41,33 +41,42 @@ export default class Signup extends Component {
   render() {
     return (
       <React.Fragment>
-        <h2>Signup</h2>
-        <Form onSubmit={this.handleSubmit}>
-          <Form.Group>
-            <Form.Label htmlFor="username">Username: </Form.Label>
-            <Form.Control
-              type="text"
-              name="username"
-              value={this.state.username}
-              onChange={this.handleChange}
-              id="username"
-            />
-          </Form.Group>
-          <Form.Group>
-            <Form.Label htmlFor="password">Password: </Form.Label>
-            <Form.Control
-              type="password"
-              name="password"
-              value={this.state.password}
-              onChange={this.handleChange}
-              id="password"
-            />
-          </Form.Group>
-          {this.state.message && (
-            <Alert variant="danger">{this.state.message}</Alert>
-          )}
-          <Button type="submit">Signup</Button>
-        </Form>
+        <div className="bg-info p-5" style={{ borderTop: "solid 2px white" }}>
+          <Card
+            bg="light"
+            border="secondary"
+            style={{ width: "25rem", margin: "0 auto" }}
+            body
+          >
+            <h2>Signup</h2>
+            <Form onSubmit={this.handleSubmit}>
+              <Form.Group>
+                <Form.Label htmlFor="username">Username: </Form.Label>
+                <Form.Control
+                  type="text"
+                  name="username"
+                  value={this.state.username}
+                  onChange={this.handleChange}
+                  id="username"
+                />
+              </Form.Group>
+              <Form.Group>
+                <Form.Label htmlFor="password">Password: </Form.Label>
+                <Form.Control
+                  type="password"
+                  name="password"
+                  value={this.state.password}
+                  onChange={this.handleChange}
+                  id="password"
+                />
+              </Form.Group>
+              {this.state.message && (
+                <Alert variant="danger">{this.state.message}</Alert>
+              )}
+              <Button type="submit">Signup</Button>
+            </Form>
+          </Card>
+        </div>
       </React.Fragment>
     );
   }

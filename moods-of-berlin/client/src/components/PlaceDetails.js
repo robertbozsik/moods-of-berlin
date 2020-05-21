@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import EditPlace from "./EditPlace";
+import { Accordion, Button, Card } from "react-bootstrap";
 
 class PlaceDetails extends Component {
   constructor(props) {
@@ -59,6 +60,7 @@ class PlaceDetails extends Component {
         >
           <img
             className="img-fluid"
+            style={{ minWidth: "100%" }}
             src={this.state.imgPath}
             alt={this.state.title}
           ></img>
@@ -84,24 +86,33 @@ class PlaceDetails extends Component {
           {/* Only the owner is allowed to edit or delete a place */}
           {allowedToEditOrDelete && (
             <div className="card-footer">
-              <button type="button" className="btn btn-info mx-1">
-                Edit
-              </button>
-
-              <button
-                type="button"
-                className="btn btn-danger mx-1"
-                onClick={() => this.deletePlace()}
-              >
-                Delete
-              </button>
-              <br></br>
-
-              <EditPlace
-                thePlace={this.state}
-                getThePlace={this.getSinglePlace}
-                {...this.props}
-              />
+              <Accordion>
+                <Card>
+                  <Card.Header>
+                    <Accordion.Toggle as={Button} variant="info" eventKey="0">
+                      Edit
+                    </Accordion.Toggle>
+                    <button
+                      type="button"
+                      className="btn btn-danger mx-2"
+                      onClick={() => this.deletePlace()}
+                    >
+                      Delete
+                    </button>
+                    <br></br>
+                  </Card.Header>
+                  <Accordion.Collapse eventKey="0">
+                    <Card.Body>
+                      {" "}
+                      <EditPlace
+                        thePlace={this.state}
+                        getThePlace={this.getSinglePlace}
+                        {...this.props}
+                      />
+                    </Card.Body>
+                  </Accordion.Collapse>
+                </Card>
+              </Accordion>
             </div>
           )}
         </div>
