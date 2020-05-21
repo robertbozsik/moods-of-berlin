@@ -10,12 +10,10 @@ const logger = require("morgan");
 const path = require("path");
 
 mongoose
-
   .connect(process.env.MONGODB_URI || "mongodb://localhost/moods-of-berlin", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-
   .then((x) => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}"`
@@ -74,18 +72,6 @@ app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
 // default value for title local
 app.locals.title = "Express - Generated with IronGenerator";
-
-// TWO TEST ROUTES ADDED BY ALFONSO
-// 1
-// app.get("/api/places", (req, res) => {
-//   // res.send("All good with the GET request");
-//   // res.send(req.query);
-// });
-// 2
-// app.post("/", (req, res) => { // http//:localhost:5555 --> http//:localhost:5555/api/places
-//   // res.send("All good with the POST request");
-//   // res.send(req.body);
-// });
 
 app.use("/api/places", require("./routes/places"));
 app.use("/api/auth", require("./routes/auth"));
