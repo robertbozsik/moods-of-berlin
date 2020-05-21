@@ -1,4 +1,4 @@
-# moods-of-berlin
+# MOODS OF BERLIN
 
 This web App was submitted as a final project during the Ironhack Bootcamp for Web Development in Berlin.\
 It was made with MongoDB, Express.js, React.js, Node.js, Passport.js. APIs used: Mapbox and Cloudinary. The app is deployed to Heroku. 
@@ -24,15 +24,15 @@ The owner can add edit and delete his/her own places.
 
 # Sources:
 
-Node.js: http://nodejs.org \
-Express.js: http://expressjs.com \
-Passport.js: http://www.passportjs.org/ \
 MongoDB: https://www.mongodb.com/ \
+Express.js: http://expressjs.com \
 React.js: https://reactjs.org/ \
+Node.js: http://nodejs.org \
+Passport.js: http://www.passportjs.org/ \
 Mapbox: http://mapbox.com \
 Cloudinary: https://cloudinary.com/ \
 Heroku: https://www.heroku.com/ \
-See package.json for further APIs.
+See package.json for the detailed list of APIs.
 
 # Pictures of the starting database and credit of the owners:
 
