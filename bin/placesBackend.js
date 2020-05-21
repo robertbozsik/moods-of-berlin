@@ -293,10 +293,15 @@ const mongoose = require("mongoose");
 const Place = require("../models/Place.js");
 
 mongoose
-  .connect("mongodb://localhost/moods-of-berlin", {
+  /*   .connect("mongodb://localhost/moods-of-berlin", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }) */
+  .connect(process.env.MONGODB_URI || "mongodb://localhost/moods-of-berlin", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
+
   .then((x) => {
     console.log(
       `Connected to Mongo from the seed file! Database name: "${x.connections[0].name}"`
