@@ -5,6 +5,7 @@ import axios from "axios";
 import PlaceList from "./PlaceList";
 import Colorbar from "./Colorbar";
 import Map from "./Map";
+import { Link } from "react-router-dom";
 
 // here we save the mapbox token
 const mapboxToken =
@@ -103,6 +104,20 @@ class Places extends Component {
           mapboxToken={mapboxToken}
           mood={this.state.mood}
         />
+        <div
+          className="alert alert-success"
+          style={{ margin: "30px 30px 0 30px", borderRadius: "0" }}
+          role="alert"
+        >
+          <h4 className="alert-heading">Moods of Berlin</h4>
+          <p>Please fill the form to add a Place.</p>
+          <hr></hr>
+          <Link to={`/addPlace`}>
+            <button type="button" className="btn btn-success btn-lg">
+              Add a Place
+            </button>
+          </Link>
+        </div>
         <Colorbar changeMood={this.changeMood} />
         {this.state.places.length ? (
           <PlaceList places={this.state.places} />
