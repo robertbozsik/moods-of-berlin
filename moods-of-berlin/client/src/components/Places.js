@@ -8,8 +8,7 @@ import Map from "./Map";
 import { Link } from "react-router-dom";
 
 // here we save the mapbox token
-const mapboxToken =
-  "pk.eyJ1Ijoicm9iZXJ0Ym96c2lrIiwiYSI6ImNrYWU4bG9kdjAyaDkzNHBuZ3Qxa3UycTEifQ.Z5U143Bdapv2hjhVxyZOXA";
+const mapboxToken = process.env.REACT_APP_MAPBOX_TOKEN;
 
 // here we create a function that returns a string with the specified values
 let query = (street, city, zip, token) => {
