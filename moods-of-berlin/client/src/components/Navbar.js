@@ -16,7 +16,7 @@ const Navbar = (props) => {
       <div className="col-6 pl-3">
         <img
           className="MoodsLogo"
-          src=".\logoMoods.png"
+          src=".\Plutchik-wheel.png"
           alt="Logo Moods of Berlin"
         ></img>
         <Nav.Brand>MOODS OF BERLIN</Nav.Brand>
