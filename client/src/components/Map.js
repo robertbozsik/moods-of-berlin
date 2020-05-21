@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ReactMapGL, { Marker } from "react-map-gl";
+import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import "./Map.css";
 
 const Map = (props) => {
@@ -10,6 +10,9 @@ const Map = (props) => {
     height: "50vh",
     zoom: 10,
   });
+
+  const [selectedPlace, setSelectedPlace] = useState(null);
+
   // console.log("this is the props ", props);
   return (
     <ReactMapGL
@@ -34,79 +37,168 @@ const Map = (props) => {
               {/* <img src="./mapbox-icon.png" alt="mapbox icon" /> */}
 
               {props.mood === "" && (
-                <img
-                  className="map-marker"
-                  src="./allColors_marker.png"
-                  alt="mapbox icon"
-                />
+                <button
+                  className="marker-btn"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setSelectedPlace(place);
+                  }}
+                >
+                  <img
+                    className="map-marker"
+                    src="./allColors_marker.png"
+                    alt="mapbox icon"
+                  />
+                </button>
               )}
 
               {props.mood === "joyful" && (
-                <img
-                  className="map-marker"
-                  src="./joyful_yellow_marker.png"
-                  alt="mapbox icon joyful"
-                />
+                <button
+                  className="marker-btn"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setSelectedPlace(place);
+                  }}
+                >
+                  <img
+                    className="map-marker"
+                    src="./joyful_yellow_marker.png"
+                    alt="mapbox icon joyful"
+                  />
+                </button>
               )}
 
               {props.mood === "relaxed" && (
-                <img
-                  className="map-marker"
-                  src="./relaxed_lightgreen_marker.png"
-                  alt="mapbox icon relaxed"
-                />
+                <button
+                  className="marker-btn"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setSelectedPlace(place);
+                  }}
+                >
+                  <img
+                    className="map-marker"
+                    src="./relaxed_lightgreen_marker.png"
+                    alt="mapbox icon relaxed"
+                  />
+                </button>
               )}
 
               {props.mood === "energetic" && (
-                <img
-                  className="map-marker"
-                  src="./energetic_orange_marker.png"
-                  alt="mapbox icon energetic"
-                />
+                <button
+                  className="marker-btn"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setSelectedPlace(place);
+                  }}
+                >
+                  <img
+                    className="map-marker"
+                    src="./energetic_orange_marker.png"
+                    alt="mapbox icon energetic"
+                  />
+                </button>
               )}
 
               {props.mood === "bored" && (
-                <img
-                  className="map-marker"
-                  src="./bored_green_marker.png"
-                  alt="mapbox icon bored"
-                />
+                <button
+                  className="marker-btn"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setSelectedPlace(place);
+                  }}
+                >
+                  <img
+                    className="map-marker"
+                    src="./bored_green_marker.png"
+                    alt="mapbox icon bored"
+                  />
+                </button>
               )}
 
               {props.mood === "thoughtful" && (
-                <img
-                  className="map-marker"
-                  src="./thoughtful_turquise_marker.png"
-                  alt="mapbox icon thoughtful"
-                />
+                <button
+                  className="marker-btn"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setSelectedPlace(place);
+                  }}
+                >
+                  <img
+                    className="map-marker"
+                    src="./thoughtful_turquise_marker.png"
+                    alt="mapbox icon thoughtful"
+                  />
+                </button>
               )}
 
               {props.mood === "melancholic" && (
-                <img
-                  className="map-marker"
-                  src="./melancholic_blue_marker.png"
-                  alt="mapbox icon melancholic"
-                />
+                <button
+                  className="marker-btn"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setSelectedPlace(place);
+                  }}
+                >
+                  <img
+                    className="map-marker"
+                    src="./melancholic_blue_marker.png"
+                    alt="mapbox icon melancholic"
+                  />
+                </button>
               )}
 
               {props.mood === "anxious" && (
-                <img
-                  className="map-marker"
-                  src="./anxious_violet_marker.png"
-                  alt="mapbox icon anxious"
-                />
+                <button
+                  className="marker-btn"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setSelectedPlace(place);
+                  }}
+                >
+                  <img
+                    className="map-marker"
+                    src="./anxious_violet_marker.png"
+                    alt="mapbox icon anxious"
+                  />
+                </button>
               )}
 
               {props.mood === "angry" && (
-                <img
-                  className="map-marker"
-                  src="./angry_red_marker.png"
-                  alt="mapbox icon angry"
-                />
+                <button
+                  className="marker-btn"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setSelectedPlace(place);
+                  }}
+                >
+                  <img
+                    className="map-marker"
+                    src="./angry_red_marker.png"
+                    alt="mapbox icon angry"
+                  />
+                </button>
               )}
             </Marker>
           );
         })}
+
+      {selectedPlace ? (
+        <Popup
+          latitude={selectedPlace.latitude}
+          longitude={selectedPlace.longitude}
+          onClose={() => {
+            setSelectedPlace(null);
+          }}
+        >
+          <div className="popup-text" style={{ padding: "7px" }}>
+            <h5 style={{ fontSize: "16px" }}>{selectedPlace.title}</h5>
+            <p style={{ fontSize: "12px" }}>
+              {selectedPlace.street} {selectedPlace.zip} {selectedPlace.city}
+            </p>
+          </div>
+        </Popup>
+      ) : null}
     </ReactMapGL>
   );
 };

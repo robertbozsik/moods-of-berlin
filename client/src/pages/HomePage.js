@@ -94,24 +94,38 @@ const HomePage = (props) => {
         </div>
 
         <div className="col-lg-6 p-3">
-          <h4 className="my-3">INTRO TEXT</h4>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae
-            turpis nunc. Sed eu fermentum velit. Duis molestie augue neque, eu
-            hendrerit tellus elementum at. Suspendisse facilisis pharetra nulla
-            sagittis luctus. Vivamus non felis semper, bibendum justo at, cursus
-            velit. Class aptent taciti sociosqu ad litora torquent per conubia
-            nostra, per inceptos himenaeos. Phasellus ullamcorper iaculis massa,
-            eget luctus nisl iaculis non. Praesent varius, sapien sed egestas
-            lacinia, turpis diam facilisis erat, id bibendum sapien magna at
-            arcu. Pellentesque in pretium odio. Sed dignissim arcu vitae dolor
-            posuere, in accumsan purus eleifend. Duis risus enim, lacinia in
-            tellus lobortis, commodo porta dui. In sagittis sed mauris id
-            aliquam. Vivamus augue quam, sollicitudin vitae velit vitae,
-            hendrerit sodales augue. Fusce a neque ac turpis mattis tincidunt.
-            Phasellus quis nulla ut nisi egestas auctor. Morbi consequat augue
-            non ante porta porttitor. Ut scelerisque sodales nibh a molestie.
-            Integer quis scelerisque justo.
+            We are driven by feelings. We often decide where to go or what to do
+            based on our actual mood.
+            <br />
+            Most of the Websites that you can find on the internet recommend you
+            places to visit based on popularity, price, or some other touristic
+            point of view.
+            <br />
+            <br />
+            MOODS OF BERLIN recommends places to visit in Berlin, however, based
+            on your actual mood and helps your choice visualizing all the moods
+            and places by colors.
+            <br />
+            The categories of the moods and their colorful representation are
+            inspired by the theories of psychologist Robert Plutchik’s.
+            <br />
+            <br />
+            If you have been living in a city for some years you must found some
+            places where you go when you feel in a certain way.
+            <br />
+            For example, you go to the cinema in case you feel bored, or for a
+            run, if you feel angry in order to get calmed, or visit a place that
+            you love if you feel joyful.
+            <br />
+            <br />
+            Our App will help you to save and organize your favorite places and
+            share them with others. Users are able to add a personal description
+            to their beloved places.
+            <br />
+            Create a common database in order to inspire others with your own
+            stories and help each other to feel better by finding the perfect
+            place for the given mood.
           </p>
         </div>
       </div>
