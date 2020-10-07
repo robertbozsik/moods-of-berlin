@@ -9,7 +9,7 @@ Creating a single-page Web application using the MERN stack (MongoDB, Express, R
 
 # Project details:
 
-The app implements an Yelp-like approach for users who like to discover places in Berlin but are especially interested in what kind of
+The app implements a Yelp-like approach for users who like to discover places in Berlin but are especially interested in what kind of
 emotions/moods users connect with their recommendations.\
 The mood categories and their representation are inspired by the theories of the psychologist Robert Plutchik's.
 
